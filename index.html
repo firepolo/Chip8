@@ -1,0 +1,74 @@
+﻿<!--<h1>Chip 8 Emulator</h1>-->
+
+<div class="left_wrapper">
+
+    <div>
+        <button onclick="program.run(this);">run</button>
+        <button onclick="program.cycle();">step</button>
+        <button onclick="program.reset();">reset</button>
+        <button onclick="program.load();">load</button>
+        <select id="selectedProgram">
+            <option>15puzzle</option>
+            <option>blinky</option>
+            <option>blitz</option>
+            <option>brix</option>
+            <option>connect4</option>
+            <option>guess</option>
+            <option>hidden</option>
+            <option>invaders</option>
+            <option>kaleid</option>
+            <option>maze</option>
+            <option>merlin</option>
+            <option>missile</option>
+            <option>pong</option>
+            <option>pong2</option>
+            <option>puzzle</option>
+            <option>syzygy</option>
+            <option>tank</option>
+            <option>tetris</option>
+            <option>tictac</option>
+            <option>ufo</option>
+            <option>vbrix</option>
+            <option>vers</option>
+            <option>wipeoff</option>
+        </select>
+    </div>
+    
+    <canvas id="canvas" width="320" height="160"></canvas>
+
+    <table>
+        <tr>
+            <td><button onclick="chip8.setKey(0x1);">1</button><td>
+            <td><button onclick="chip8.setKey(0x2);">2</button><td>
+            <td><button onclick="chip8.setKey(0x3);">3</button><td>
+            <td><button onclick="chip8.setKey(0xC);">C</button><td>
+        </tr>
+        <tr>
+            <td><button onclick="chip8.setKey(0x4);">4</button><td>
+            <td><button onclick="chip8.setKey(0x5);">5</button><td>
+            <td><button onclick="chip8.setKey(0x6);">6</button><td>
+            <td><button onclick="chip8.setKey(0xD);">D</button><td>
+        </tr>
+        <tr>
+            <td><button onclick="chip8.setKey(0x7);">7</button><td>
+            <td><button onclick="chip8.setKey(0x8);">8</button><td>
+            <td><button onclick="chip8.setKey(0x9);">9</button><td>
+            <td><button onclick="chip8.setKey(0xE);">E</button><td>
+        </tr>
+        <tr>
+            <td><button onclick="chip8.setKey(0xA);">A</button><td>
+            <td><button onclick="chip8.setKey(0x0);">0</button><td>
+            <td><button onclick="chip8.setKey(0xB);">B</button><td>
+            <td><button onclick="chip8.setKey(0xF);">F</button><td>
+        </tr>
+    </table>
+</div>
+
+<object class="beep" type="audio/wav" data="beep.wav" hidden="true">
+    <param name="autostart" value="false" />
+</object>
+<embed class="beep" src="beep.wav" autostart="false" enablejavascript="true" width="0" height="0">
+<audio class="beep" type="audio/mpeg" src="beep.mp3" />
+
+<script type="text/javascript" src="chip8.js"></script>
+<script type="text/javascript" src="main.js"></script>
