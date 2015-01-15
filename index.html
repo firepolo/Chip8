@@ -68,7 +68,10 @@
     <param name="autostart" value="false" />
 </object>
 <embed class="beep" src="beep.wav" autostart="false" enablejavascript="true" width="0" height="0">
-<audio class="beep" type="audio/mpeg" src="beep.mp3" />
+<audio class="beep">
+    <source type="audio/mpeg" src="beep.mp3" />
+    <source type="audio/wav" src="beep.wav" />
+</audio>
 
 <script type="text/javascript" src="chip8.js"></script>
 <script type="text/javascript" src="main.js"></script>

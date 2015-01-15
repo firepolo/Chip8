@@ -39,12 +39,6 @@
         
         if (beep.object) beep = beep.object;
         if (beep.Play) beep.play = beep.Play;
-        else if (navigator.userAgent.indexOf("Firefox") >= 0)
-        {
-            beep.type = "audio/wav";
-            beep.src = "beep.wav";
-        }
-        beep.play();
         if (!beep) return false;
         
         canvas = document.getElementById("canvas");
